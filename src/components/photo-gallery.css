@@ -1,13 +1,21 @@
 .photo-gallery {
     display: grid;
     grid-template-columns: repeat(5, auto);
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
 }
 
 .block {
-    opacity: 50%;
     background-color: grey;
     width: 250px;
-    height: 300px;
-    margin: 5px;
+    height: 350px;
+}
+
+.block:hover {
+    background-color: gray;
+    opacity: 50%;
+}
+
+img {
+    width: 250px;
+    height: 350px;
 }
