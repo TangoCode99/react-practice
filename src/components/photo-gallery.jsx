@@ -11,7 +11,15 @@ export default function PhotoGallery() {
     return (
         <div className="photo-gallery">
             <div className="block">
-                <img src={beach} alt="black beach in Seattle" />
+                <a href="/">
+                    <img src={beach} alt="Rialto Beach in Seattle" />
+                    <div className="overlay">
+                        <div className="text">
+                            <h2>Rialto Beach</h2>
+                            <h3>- view -</h3>
+                        </div>
+                    </div>
+                </a>
             </div>
             <div className="block">
                 <img src={lake} alt="lake in Seattle" />
