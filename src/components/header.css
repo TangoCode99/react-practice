@@ -1,5 +1,5 @@
 .app-header {
-    background-color: antiquewhite;
+    background-color: rgb(253, 245, 234);
     color: black;
     font-size: 25px;
 }
@@ -19,8 +19,17 @@ ul {
     width: 100%;
 }
 
-button {
-    background-color: antiquewhite;
+.app-header button {
+    text-transform: uppercase;
+    margin: 0px 10px;
+    padding: 10px 0px;
+    background-color: rgb(253, 245, 234);
+}
+
+.app-header button:hover {
+    border-bottom: 0.5px solid black;
+    border-top: 0.5px solid black;
+    transition: 0.25s ease;
 }
 
 .app-name {

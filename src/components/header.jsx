@@ -8,10 +8,9 @@ export default function Header() {
                 <div id="wrapper">
                     <nav>
                         <ul>
-                            <li><button>Latest Work</button></li>
-                            <li><button>Archive</button></li>
-                            <li><button>About</button></li>
-                            <li><button>Contact</button></li>
+                            <li><button className="btn">Latest Work</button></li>
+                            <li><button className="btn">About</button></li>
+                            <li><button className="btn">Contact</button></li>
                         </ul>
                     </nav>
                 </div>
