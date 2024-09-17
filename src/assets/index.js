@@ -1,0 +1,12 @@
+export const Rialto = require('../assets/blackbeach.jpg');
+export const Capri = require('../assets/capri.jpg');
+export const CapriBeach = require('../assets/capribeach.jpg');
+export const Forest = require('../assets/forest.jpg');
+export const Lake = require('../assets/forest.jpg');
+export const Market = require('../assets/market.jpg');
+export const Museum = require('../assets/museum.jpg');
+export const PalmTrees = require('../assets/palmtrees.jpg');
+export const Sorrento = require('../assets/sorrento.jpg');
+export const SpaceNeedle = require('../assets/spaceneedle.jpg');
+export const Vessel = require('../assets/vessel.jpeg');
+export const WaterFall = require('../assets/waterfall.jpg');

@@ -1,13 +1,17 @@
 import React from "react";
-import beach from "../assets/blackbeach.jpg";
-import lake from "../assets/lake.jpg";
-import needle from "../assets/spaceneedle.jpg";
-import forest from "../assets/forest.jpg";
-import waterfall from "../assets/waterfall.jpg";
-import market from "../assets/market.jpg";
-import museum from "../assets/museum.jpg";
-import vessel from "../assets/vessel.jpeg";
-import trees from "../assets/palmtrees.jpg"
+import { Rialto, 
+    CapriBeach,
+    Capri,
+    Forest,
+    Lake,
+    Market,
+    Museum,
+    PalmTrees,
+    Sorrento,
+    SpaceNeedle,
+    Vessel,
+    WaterFall
+} from "../assets";
 import "./photo-gallery.css";
 
 const handleOpen = () => {
@@ -19,7 +23,7 @@ export default function PhotoGallery() {
         <div className="photo-gallery">
             <div className="block">
                 <button onClick={handleOpen}>
-                    <img src={beach} alt="Rialto Beach in Seattle" />
+                    <img src={Rialto} alt="Rialto Beach in Seattle" />
                     <div className="overlay">
                         <div className="text">
                             <h2>Rialto Beach</h2>
@@ -30,7 +34,7 @@ export default function PhotoGallery() {
             </div>
             <div className="block">
                 <button>
-                    <img src={lake} alt="lake in Seattle" />
+                    <img src={Lake} alt="lake in Seattle" />
                     <div className="overlay">
                         <div className="text">
                             <h2>Lake Crescent</h2>
@@ -41,7 +45,7 @@ export default function PhotoGallery() {
             </div>
             <div className="block">
                 <button>
-                    <img src={needle} alt="Space Needle in Seattle" />
+                    <img src={SpaceNeedle} alt="Space Needle in Seattle" />
                     <div className="overlay">
                         <div className="text">
                             <h2>Space Needle</h2>
@@ -52,7 +56,7 @@ export default function PhotoGallery() {
             </div>
             <div className="block">
                 <button>
-                    <img src={forest} alt="forest in Seattle" />
+                    <img src={Forest} alt="forest in Seattle" />
                     <div className="overlay">
                         <div className="text">
                             <h2>Forest</h2>
@@ -63,7 +67,7 @@ export default function PhotoGallery() {
             </div>
             <div className="block">
                 <button>
-                    <img src={waterfall} alt="Mountainside in Seattle" />
+                    <img src={WaterFall} alt="Mountainside in Seattle" />
                     <div className="overlay">
                         <div className="text">
                             <h2>Waterfall</h2>
@@ -74,7 +78,7 @@ export default function PhotoGallery() {
             </div>
             <div className="block">
                 <button>
-                    <img src={market} alt="Public Market in Seattle" />
+                    <img src={Market} alt="Public Market in Seattle" />
                     <div className="overlay">
                         <div className="text">
                             <h2>Public Market</h2>
@@ -85,7 +89,7 @@ export default function PhotoGallery() {
             </div>
             <div className="block">
                 <button>
-                    <img src={museum} alt="The Getty in Los Angeles" />
+                    <img src={Museum} alt="The Getty in Los Angeles" />
                     <div className="overlay">
                         <div className="text">
                             <h2>The Getty</h2>
@@ -96,7 +100,7 @@ export default function PhotoGallery() {
             </div>
             <div className="block">
                 <button>
-                    <img src={trees} alt="Palm Trees in Los Angelese" />
+                    <img src={PalmTrees} alt="Palm Trees in Los Angelese" />
                     <div className="overlay">
                         <div className="text">
                             <h2>Palm Trees</h2>
@@ -107,10 +111,43 @@ export default function PhotoGallery() {
             </div>
             <div className="block">
                 <button>
-                    <img src={vessel} alt="The Vessel in New York City"/>
+                    <img src={Vessel} alt="The Vessel in New York City"/>
                     <div className="overlay">
                         <div className="text">
                             <h2>The Vessel</h2>
+                            <h3>- view -</h3>
+                        </div>
+                    </div>
+                </button>
+            </div>
+            <div className="block">
+                <button>
+                    <img src={Sorrento} alt="Sorrento, Italy"/>
+                    <div className="overlay">
+                        <div className="text">
+                            <h2>Sorrento</h2>
+                            <h3>- view -</h3>
+                        </div>
+                    </div>
+                </button>
+            </div>
+            <div className="block">
+                <button>
+                    <img src={Capri} alt="Capri, Italy"/>
+                    <div className="overlay">
+                        <div className="text">
+                            <h2>Capri</h2>
+                            <h3>- view -</h3>
+                        </div>
+                    </div>
+                </button>
+            </div>
+            <div className="block">
+                <button>
+                    <img src={CapriBeach} alt="Capri Beach, Italy"/>
+                    <div className="overlay">
+                        <div className="text">
+                            <h2>Capri Beach</h2>
                             <h3>- view -</h3>
                         </div>
                     </div>
