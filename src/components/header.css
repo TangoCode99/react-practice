@@ -1,12 +1,13 @@
 .app-header {
     background-color: antiquewhite;
     color: black;
+    font-size: 25px;
 }
 
 #navbar {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 ul {
@@ -18,7 +19,12 @@ ul {
     width: 100%;
 }
 
+button {
+    background-color: antiquewhite;
+}
+
 .app-name {
+    font-weight: bold;
     margin: 25px;
     text-align: center;
 }

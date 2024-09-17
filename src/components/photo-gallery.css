@@ -1,11 +1,17 @@
 .photo-gallery {
   display: grid;
-  grid-template-columns: repeat(5, auto);
+  grid-template-columns: repeat(4, auto);
 }
 
 .block {
   position: relative;
   width: 100%;
+}
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 .overlay {
@@ -22,12 +28,13 @@
 }
 
 .block:hover .overlay {
-  opacity: 50%;
+  cursor: pointer;
+  opacity: 80%;
 }
 
 .text {
   color: white;
-  font-size: 20px;
+  font-size: 25px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -35,18 +42,11 @@
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
-}
-
-a {
-  text-decoration: none;
-}
-
-h2, h3 {
-  color: white;
+  text-wrap: nowrap;
 }
 
 img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 500px;
 }

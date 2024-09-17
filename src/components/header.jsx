@@ -8,10 +8,10 @@ export default function Header() {
                 <div id="wrapper">
                     <nav>
                         <ul>
-                            <li>Latest Work</li>
-                            <li>Archive</li>
-                            <li>About</li>
-                            <li>Contact</li>
+                            <li><button>Latest Work</button></li>
+                            <li><button>Archive</button></li>
+                            <li><button>About</button></li>
+                            <li><button>Contact</button></li>
                         </ul>
                     </nav>
                 </div>

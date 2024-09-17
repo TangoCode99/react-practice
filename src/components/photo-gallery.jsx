@@ -5,13 +5,20 @@ import needle from "../assets/spaceneedle.jpg";
 import forest from "../assets/forest.jpg";
 import waterfall from "../assets/waterfall.jpg";
 import market from "../assets/market.jpg";
+import museum from "../assets/museum.jpg";
+import vessel from "../assets/vessel.jpeg";
+import trees from "../assets/palmtrees.jpg"
 import "./photo-gallery.css";
+
+const handleOpen = () => {
+    console.log("open modal");
+};
 
 export default function PhotoGallery() {
     return (
         <div className="photo-gallery">
             <div className="block">
-                <a href="/">
+                <button onClick={handleOpen}>
                     <img src={beach} alt="Rialto Beach in Seattle" />
                     <div className="overlay">
                         <div className="text">
@@ -19,25 +26,95 @@ export default function PhotoGallery() {
                             <h3>- view -</h3>
                         </div>
                     </div>
-                </a>
+                </button>
             </div>
             <div className="block">
-                <img src={lake} alt="lake in Seattle" />
+                <button>
+                    <img src={lake} alt="lake in Seattle" />
+                    <div className="overlay">
+                        <div className="text">
+                            <h2>Lake Crescent</h2>
+                            <h3>- view -</h3>
+                        </div>
+                    </div>
+                </button>
             </div>
             <div className="block">
-                <img src={needle} alt="Space Needle in Seattle" />
+                <button>
+                    <img src={needle} alt="Space Needle in Seattle" />
+                    <div className="overlay">
+                        <div className="text">
+                            <h2>Space Needle</h2>
+                            <h3>- view -</h3>
+                        </div>
+                    </div>
+                </button>
             </div>
             <div className="block">
-                <img src={forest} alt="forest in Seattle" />
+                <button>
+                    <img src={forest} alt="forest in Seattle" />
+                    <div className="overlay">
+                        <div className="text">
+                            <h2>Forest</h2>
+                            <h3>- view -</h3>
+                        </div>
+                    </div>
+                </button>
             </div>
             <div className="block">
-                <img src={waterfall} alt="Mountainside in Seattle" />
+                <button>
+                    <img src={waterfall} alt="Mountainside in Seattle" />
+                    <div className="overlay">
+                        <div className="text">
+                            <h2>Waterfall</h2>
+                            <h3>- view -</h3>
+                        </div>
+                    </div>
+                </button>
             </div>
             <div className="block">
-                <img src={market} alt="Public Market in Seattle" />
+                <button>
+                    <img src={market} alt="Public Market in Seattle" />
+                    <div className="overlay">
+                        <div className="text">
+                            <h2>Public Market</h2>
+                            <h3>- view -</h3>
+                        </div>
+                    </div>
+                </button>
             </div>
             <div className="block">
-                <img src={beach} alt="black beach in Seattle" />
+                <button>
+                    <img src={museum} alt="The Getty in Los Angeles" />
+                    <div className="overlay">
+                        <div className="text">
+                            <h2>The Getty</h2>
+                            <h3>- view -</h3>
+                        </div>
+                    </div>
+                </button>
+            </div>
+            <div className="block">
+                <button>
+                    <img src={trees} alt="Palm Trees in Los Angelese" />
+                    <div className="overlay">
+                        <div className="text">
+                            <h2>Palm Trees</h2>
+                            <h3>- view -</h3>
+                        </div>
+                    </div>
+                </button>
+            </div>
+            <div className="block">
+                <button>
+                    <img src={vessel} alt="The Vessel in New York City"/>
+                    <div className="overlay">
+                        <div className="text">
+                            <h2>The Vessel</h2>
+                            <h3>- view -</h3>
+                        </div>
+                    </div>
+                </button>
             </div>
         </div>
     );
