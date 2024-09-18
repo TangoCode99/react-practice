@@ -1,7 +1,7 @@
 .app-header {
     background-color: rgb(253, 245, 234);
     color: black;
-    font-size: 25px;
+    font-size: 18px;
 }
 
 #navbar {
@@ -20,20 +20,27 @@ ul {
     width: 100%;
 }
 
-.app-header button {
+.app-header li {
+    text-decoration: none;
     text-transform: uppercase;
     margin: 0px 10px;
     padding: 10px 0px;
     background-color: rgb(253, 245, 234);
 }
 
-.app-header button:hover {
+.app-header li:hover {
     border-bottom: 0.5px solid black;
     border-top: 0.5px solid black;
     transition: 0.25s ease;
 }
 
+a:-webkit-any-link {
+    text-decoration: none;
+    color: black;
+}
+
 .app-name {
+    font-size: 30px;
     font-weight: bold;
     margin: 25px;
     text-align: center;

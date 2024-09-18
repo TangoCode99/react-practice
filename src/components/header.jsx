@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./header.css";
 
 export default function Header() {
@@ -8,9 +9,9 @@ export default function Header() {
                 <div id="wrapper">
                     <nav>
                         <ul>
-                            <li><button className="btn">Latest Work</button></li>
-                            <li><button className="btn">About</button></li>
-                            <li><button className="btn">Contact</button></li>
+                            <li><Link to="/">Latest Work</Link></li>
+                            <li><Link to="/about">About</Link></li>
+                            <li><Link to="/contact">Contact</Link></li>
                         </ul>
                     </nav>
                 </div>
