@@ -10,3 +10,4 @@ export const Sorrento = require('../assets/sorrento.jpg');
 export const SpaceNeedle = require('../assets/spaceneedle.jpg');
 export const Vessel = require('../assets/vessel.jpeg');
 export const WaterFall = require('../assets/waterfall.jpg');
+export const Profile = require('../assets/profile.JPG');
