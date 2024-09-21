@@ -16,7 +16,12 @@ export default function Header() {
                     </nav>
                 </div>
                 <div className="app-name">
-                    Tango Nham
+                    <div className="main-name">
+                        Tango Nham
+                    </div>
+                    <div className="subname">
+                        Developer / Photographer
+                    </div>
                 </div>
             </div>
         </header>
