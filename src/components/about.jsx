@@ -1,7 +1,7 @@
 import React from "react";
 import { useRef } from "react";
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-import { Profile } from "../assets";
+import { CSSLogo, HTMLLogo, JSLogo, Profile, ReactLogo } from "../assets";
 import "./about.css";
 
 const aboutMe = "Hi! I'm Tango, a frontend developer with a passion for creating seamless and engaging user " +
@@ -52,6 +52,13 @@ export default function About() {
                                 <li>Identified and fixed over 100+ bugs in the codebase, improving software stability and user experience by 25%</li>
                             </ul>
                         </div>
+                        <div className="tools">
+                            <div className="logo"><img src={ReactLogo} alt="React Logo" /></div>
+                            <div className="logo"><img src={JSLogo} alt="JS Logo" /></div>
+                            <div className="logo"><img src={HTMLLogo} alt="HTML Logo" /></div>
+                            <div className="logo"><img src={CSSLogo} alt="CSS Logo" /></div>
+                            <div className="logo"></div>
+                        </div>
                     </div>
                     <div className="body-wrapper">
                         <h3>Shaw Industries</h3>
@@ -65,6 +72,11 @@ export default function About() {
                                 <li>Documented technical specifications and user guides to assist in the onboarding of new members and users</li>
                             </ul>
                         </div>
+                        <div className="tools">
+                            <div className="logo"></div>
+                            <div className="logo"></div>
+                            <div className="logo"></div>
+                        </div>
                     </div>
                     <div className="body-wrapper">
                         <h3>The University of Georgia</h3>
@@ -77,6 +89,12 @@ export default function About() {
                                 <li>Performed diagnostics/troubleshooting of multiple issues for an ease of user experience</li>
                                 <li>Maintained technologies to ensure they are working properly and effectively</li>
                             </ul>
+                        </div>
+                        <div className="tools">
+                            <div className="logo"></div>
+                            <div className="logo"></div>
+                            <div className="logo"></div>
+                            <div className="logo"></div>
                         </div>
                     </div>
                 </div>

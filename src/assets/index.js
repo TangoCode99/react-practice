@@ -11,3 +11,7 @@ export const SpaceNeedle = require('../assets/spaceneedle.jpg');
 export const Vessel = require('../assets/vessel.jpeg');
 export const WaterFall = require('../assets/waterfall.jpg');
 export const Profile = require('../assets/profile.JPG');
+export const ReactLogo = require('../assets/react.png');
+export const HTMLLogo = require('../assets/htmlLogo.png');
+export const CSSLogo = require('../assets/cssLogo.png');
+export const JSLogo = require('../assets/jsLogo.png');
