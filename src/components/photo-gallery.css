@@ -1,57 +1,51 @@
-.photo-gallery {
-  margin: 0px;
-  padding: 0px;
+.gallery-grid {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 5fr)); /* Adjust the minmax values for desired width */
+  gap: 0px;
 }
 
-.block {
-  margin: 0px;
-  padding: 0px;
+.gallery-item {
   position: relative;
   width: 100%;
+  height: 450px;
+  overflow: hidden;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Start from slightly below */
+  transition: opacity 1s ease, transform 1s ease; /* Smooth transition */
 }
 
-button {
-  border: none;
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
+.gallery-item img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover; /* Ensures the image fills the space while preserving aspect ratio */
 }
 
-.overlay {
+/* When 'loaded' class is added, images will fade in and move upwards */
+.gallery-grid.loaded .gallery-item {
+  opacity: 1;
+  transform: translateY(0); /* Move to original position */
+}
+
+/* Styling for the description */
+.description {
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
-  right: 0;
+  width: 100%;
   height: 100%;
-  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   opacity: 0;
-  transition: 1s ease;
-  background-color: #5c5c5c;
-}
-
-.block:hover .overlay {
-  cursor: pointer;
-  opacity: 80%;
-}
-
-.text {
-  color: white;
+  transition: opacity 0.3s ease-in-out;
+  color: #fff; /* Text color */
   font-size: 25px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
   text-align: center;
-  text-wrap: nowrap;
+  padding: 10px;
 }
 
-img {
-  position: relative;
-  width: 100%;
-  height: 500px;
+/* Reveal the description on hover */
+.gallery-item:hover .description {
+  opacity: 1;
 }

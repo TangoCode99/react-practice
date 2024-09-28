@@ -1,6 +1,6 @@
 .app-header {
-    background-color: rgb(253, 245, 234);
-    color: black;
+    background-color: #BBCBCB;
+    color: #18020C;
     font-size: 18px;
 }
 
@@ -25,18 +25,18 @@
     text-transform: uppercase;
     margin: 0px 10px;
     padding: 10px 0px;
-    background-color: rgb(253, 245, 234);
+    background-color: #BBCBCB;
 }
 
 .app-header li:hover {
-    border-bottom: 0.5px solid black;
-    border-top: 0.5px solid black;
-    transition: 0.25s ease;
+    border-bottom: 0.5px solid #18020C;
+    border-top: 0.5px solid #18020C;
+    transition: 1s ease-in;
 }
 
 a:-webkit-any-link {
     text-decoration: none;
-    color: black;
+    color: #18020C;
 }
 
 .app-name {
@@ -55,5 +55,6 @@ a:-webkit-any-link {
 
 .subname {
     font-size: 15px;
-    font-weight: 100;
+    font-weight: 300;
+    letter-spacing: 3px;
 }

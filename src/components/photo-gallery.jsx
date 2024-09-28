@@ -1,5 +1,6 @@
 import React from "react";
-import { Rialto, 
+import {
+    Rialto,
     CapriBeach,
     Capri,
     Forest,
@@ -12,147 +13,49 @@ import { Rialto,
     Vessel,
     WaterFall
 } from "../assets";
+import { useEffect, useState } from "react";
 import "./photo-gallery.css";
 
-const handleOpen = () => {
-    console.log("open modal");
-};
+const images = [
+    { src: Rialto, alt: 'Rialto Beach', desc: 'Rialto Beach' },
+    { src: CapriBeach, alt: 'Capri Beach', desc: 'Marina Grande Beach' },
+    { src: Capri, alt: 'Capri', desc: 'Capri' },
+    { src: Forest, alt: 'Forest', desc: 'Marymere Falls' },
+    { src: Lake, alt: 'Lake Crescent', desc: 'Lake Crescent' },
+    { src: Market, alt: 'Public Market', desc: 'Public Market' },
+    { src: Museum, alt: 'The Getty', desc: 'The Getty' },
+    { src: PalmTrees, alt: 'Palm Trees', desc: 'Venice Beach' },
+    { src: Sorrento, alt: 'Positano', desc: 'Positano' },
+    { src: SpaceNeedle, alt: 'Space Needle', desc: 'Space Needle' },
+    { src: Vessel, alt: 'The Vessel', desc: 'The Vessel' },
+    { src: WaterFall, alt: 'Waterfall', desc: 'Olallie State Park' },
+];
+
+const Gallery = ({ images }) => {
+    const [loaded, setLoaded] = useState(false);
+
+    // Trigger the images to load in with animation after component mounts
+    useEffect(() => {
+        setTimeout(() => setLoaded(true), 100); // Slight delay for smooth transition
+    }, []);
+    return (
+        <div className={`gallery-grid ${loaded ? 'loaded' : ''}`}>
+            {images.map((image, index) => (
+                <div key={index} className="gallery-item">
+                    <img src={image.src} alt={image.alt} />
+                    <div className="description">
+                        <p>{image.desc}</p>
+                    </div>
+                </div>
+            ))}
+        </div>
+    );
+}
 
 export default function PhotoGallery() {
     return (
-        <div className="photo-gallery">
-            <div className="block">
-                <button onClick={handleOpen}>
-                    <img src={Rialto} alt="Rialto Beach in Seattle" />
-                    <div className="overlay">
-                        <div className="text">
-                            <h2>Rialto Beach</h2>
-                            <h3>- view -</h3>
-                        </div>
-                    </div>
-                </button>
-            </div>
-            <div className="block">
-                <button>
-                    <img src={Lake} alt="lake in Seattle" />
-                    <div className="overlay">
-                        <div className="text">
-                            <h2>Lake Crescent</h2>
-                            <h3>- view -</h3>
-                        </div>
-                    </div>
-                </button>
-            </div>
-            <div className="block">
-                <button>
-                    <img src={SpaceNeedle} alt="Space Needle in Seattle" />
-                    <div className="overlay">
-                        <div className="text">
-                            <h2>Space Needle</h2>
-                            <h3>- view -</h3>
-                        </div>
-                    </div>
-                </button>
-            </div>
-            <div className="block">
-                <button>
-                    <img src={Forest} alt="forest in Seattle" />
-                    <div className="overlay">
-                        <div className="text">
-                            <h2>Forest</h2>
-                            <h3>- view -</h3>
-                        </div>
-                    </div>
-                </button>
-            </div>
-            <div className="block">
-                <button>
-                    <img src={WaterFall} alt="Mountainside in Seattle" />
-                    <div className="overlay">
-                        <div className="text">
-                            <h2>Waterfall</h2>
-                            <h3>- view -</h3>
-                        </div>
-                    </div>
-                </button>
-            </div>
-            <div className="block">
-                <button>
-                    <img src={Market} alt="Public Market in Seattle" />
-                    <div className="overlay">
-                        <div className="text">
-                            <h2>Public Market</h2>
-                            <h3>- view -</h3>
-                        </div>
-                    </div>
-                </button>
-            </div>
-            <div className="block">
-                <button>
-                    <img src={Museum} alt="The Getty in Los Angeles" />
-                    <div className="overlay">
-                        <div className="text">
-                            <h2>The Getty</h2>
-                            <h3>- view -</h3>
-                        </div>
-                    </div>
-                </button>
-            </div>
-            <div className="block">
-                <button>
-                    <img src={PalmTrees} alt="Palm Trees in Los Angelese" />
-                    <div className="overlay">
-                        <div className="text">
-                            <h2>Palm Trees</h2>
-                            <h3>- view -</h3>
-                        </div>
-                    </div>
-                </button>
-            </div>
-            <div className="block">
-                <button>
-                    <img src={Vessel} alt="The Vessel in New York City"/>
-                    <div className="overlay">
-                        <div className="text">
-                            <h2>The Vessel</h2>
-                            <h3>- view -</h3>
-                        </div>
-                    </div>
-                </button>
-            </div>
-            <div className="block">
-                <button>
-                    <img src={Sorrento} alt="Sorrento, Italy"/>
-                    <div className="overlay">
-                        <div className="text">
-                            <h2>Sorrento</h2>
-                            <h3>- view -</h3>
-                        </div>
-                    </div>
-                </button>
-            </div>
-            <div className="block">
-                <button>
-                    <img src={Capri} alt="Capri, Italy"/>
-                    <div className="overlay">
-                        <div className="text">
-                            <h2>Capri</h2>
-                            <h3>- view -</h3>
-                        </div>
-                    </div>
-                </button>
-            </div>
-            <div className="block">
-                <button>
-                    <img src={CapriBeach} alt="Capri Beach, Italy"/>
-                    <div className="overlay">
-                        <div className="text">
-                            <h2>Capri Beach</h2>
-                            <h3>- view -</h3>
-                        </div>
-                    </div>
-                </button>
-            </div>
+        <div className="PhotoGallery">
+            <Gallery images={images} />
         </div>
     );
 }
