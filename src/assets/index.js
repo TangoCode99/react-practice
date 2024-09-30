@@ -15,3 +15,5 @@ export const ReactLogo = require('../assets/react.png');
 export const HTMLLogo = require('../assets/htmlLogo.png');
 export const CSSLogo = require('../assets/cssLogo.png');
 export const JSLogo = require('../assets/jsLogo.png');
+export const EmailIcon = require('../assets/emailIcon.png');
+export const GithubIcon = require('../assets/githubIcon.png');

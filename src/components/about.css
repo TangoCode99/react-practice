@@ -65,6 +65,7 @@
   border: 2px solid #18020C;
   background-color: white;
   padding: 10px 30px;
+  cursor: pointer;
 }
 
 .about-body {
@@ -105,6 +106,7 @@
   border: 2px solid #18020C;
   background-color: white;
   padding: 10px 30px;
+  cursor: pointer;
 }
 
 .body-header {
@@ -132,8 +134,7 @@
 .experience {
   display: flex;
   flex-direction: column;
-  height: 50rem;
-  margin-top: 3rem;
+  height: 120vh;
 }
 
 .experience-title {
@@ -183,4 +184,125 @@
   filter: invert(100%);
   height: 35px;
   width: 35px;
+}
+
+.projects {
+  height: 300vh;
+  background-color: #2f4f4f;
+}
+
+.projects-title {
+
+  h1 {
+    margin: 0px;
+    padding: 20px;
+    color: #BBCBCB;
+  }
+}
+
+.projects-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px auto;
+  height: 90vh;
+  width: 95vw;
+  background-color: #BBCBCB;
+}
+
+.temp-img {
+  width: 500px;
+  height: 500px;
+  background-color: #808080;
+}
+
+.contact {
+  height: 70vh;
+  align-content: center;
+}
+
+.contact-title {
+  border-bottom: 2px solid #2f4f4f;
+  width: 120px;
+  margin: 0 auto;
+}
+
+.contact-body {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  margin: 0px auto;
+  text-align: left;
+
+  input {
+    font: inherit;
+    font-size: 15px;
+    margin: 2px;
+    padding: 10px;
+    border: none;
+    background-color: rgb(193, 193, 193);
+  }
+
+  textarea {
+    font: inherit;
+    font-size: 15px;
+    margin: 2px;
+    padding: 10px;
+    resize: none;
+    height: 100px;
+    border: none;
+    background-color: rgb(193, 193, 193);
+  }
+
+  button {
+    font: inherit;
+    text-transform: uppercase;
+    border: none;
+    background-color: white;
+    margin: 3px 2px;
+    padding: 10px;
+    width: 90px;
+    align-self: end;
+  }
+
+  button:hover {
+    cursor: pointer;
+    border-radius: 5px;
+    color: #BBCBCB;
+    background-color: #2f4f4f;
+    transition: 0.75s ease;
+  }
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  background-color: #2f4f4f;
+  color: #BBCBCB;
+}
+
+.socials {
+  display: flex;
+
+  img {
+    margin: 0px 5px;
+    height: 40px;
+    width: 40px;
+    filter: invert(100%);
+  }
+}
+
+.copyright {
+  font-size: 10px;
+  font-weight: 500;
 }

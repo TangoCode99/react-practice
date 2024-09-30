@@ -1,7 +1,7 @@
 import React from "react";
 import { useRef } from "react";
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-import { CSSLogo, HTMLLogo, JSLogo, Profile, ReactLogo } from "../assets";
+import { CSSLogo, HTMLLogo, JSLogo, Profile, ReactLogo, EmailIcon, GithubIcon } from "../assets";
 import "./about.css";
 
 const aboutMe = "Hi! I'm Tango, a frontend developer with a passion for creating seamless and engaging user " +
@@ -99,6 +99,63 @@ export default function About() {
                     </div>
                 </div>
             </div>
+            <div className="projects">
+                <div className="projects-title">
+                    <h1>Projects</h1>
+                </div>
+                <div className="projects-body">
+                    <div className="project-wrapper">
+                        <div className="wrapper-left">
+                            <div className="temp-img"></div>
+                        </div>
+                        <div className="wrapper-right">
+                            <h3>Basic Calculator</h3>
+                            <div className="project-desc"></div>
+                        </div>
+                    </div>
+                    <div className="project-wrapper">
+                        <div className="wrapper-right">
+                            <h3>To-Do List</h3>
+                            <div className="project-desc"></div>
+                        </div>
+                        <div className="wrapper-left">
+                            <div className="temp-img"></div>
+                        </div>
+                    </div>
+                    <div className="project-wrapper">
+                        <div className="wrapper-left">
+                            <div className="temp-img"></div>
+                        </div>
+                        <div className="wrapper-right">
+                            <h3>Random Quote Generator</h3>
+                            <div className="project-desc"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="contact">
+                <div className="contact-title">
+                    <h2>Contact</h2>
+                </div>
+                <div className="contact-body">
+                    <h5>Have a question or want to work together? Leave your details and I'll get back to you as soon as possible.</h5>
+                    <input type="text" placeholder="Name" id="contact-name" />
+                    <input type="email" placeholder="Email" id="contact-email" />
+                    <textarea type="text" placeholder="Message" id="contact-msg" />
+                    <button>Submit</button>
+                </div>
+            </div>
+            <footer className="footer">
+                <div className="socials">
+                    <a href="https://github.com/TangoCode99" target="_blank" rel="noreferrer">
+                        <img src={GithubIcon} alt="github logo" />
+                    </a>
+                    <a href="mailto:jnham7@gmail.com" target="_blank" rel="noreferrer">
+                        <img src={EmailIcon} alt="email logo" />
+                    </a>
+                </div>
+                <p className="copyright">TANGO NHAM &#169;2024</p>
+            </footer>
         </div>
     );
 };
