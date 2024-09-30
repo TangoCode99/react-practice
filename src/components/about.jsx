@@ -1,14 +1,48 @@
 import React from "react";
 import { useRef } from "react";
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-import { CSSLogo, HTMLLogo, JSLogo, Profile, ReactLogo, EmailIcon, GithubIcon } from "../assets";
+import AngularLogo from "../icons/angular.svg";
+import ReactLogo from "../icons/react.svg";
+import CSSLogo from "../icons/css3.svg";
+import GithubLogo from "../icons/github.svg";
+import HTMLLogo from "../icons/html5.svg";
+import JSLogo from "../icons/javascript.svg";
+import MUILogo from "../icons/mui.svg";
+import EmailIcon from "../icons/emailIcon.png";
+import { Profile } from "../assets";
 import "./about.css";
 
 const aboutMe = "Hi! I'm Tango, a frontend developer with a passion for creating seamless and engaging user " +
     "experiences. With two years of experience in the corporate world, I specialize in building modern, " +
     "responsive websites using React, Material UI, and HTML/CSS. I love collaborating with teams, sharing " +
-    "ideas, and working through challenges to deliver impactful solutions. I’m always excited to explore " +
-    "new projects and connect with like-minded developers, so feel free to reach out if you’d like to work together!";
+    "ideas, and working through variety of challenges to deliver impactful solutions. Outside of the computer world, " +
+    "I love to travel and document my adventures through the camera lens. Admiring the beauty and what nature has to offer.";
+
+const icons = [
+    { src: ReactLogo, alt: "React Icon", title: "React.JS" },
+    { src: JSLogo, alt: "Javascript Icon", title: "Javascript" },
+    { src: MUILogo, alt: "MUI Icon", title: "MUI" },
+    { src: HTMLLogo, alt: "HTML Icon", title: "HTML5" },
+    { src: CSSLogo, alt: "CSS Icon", title: "CSS3" },
+    { src: GithubLogo, alt: "Github Icon", title: "Github" },
+]
+
+const SkillIcons = () => {
+    return (
+        <div className="skills-section">
+            <div className="skills">
+                {icons.map((icon, index) => {
+                    return (
+                        <div className="skill" key={index}>
+                            <img src={icon.src} alt={icon.alt} />
+                            <p>{icon.title}</p>
+                        </div>
+                    );
+                })}
+            </div>
+        </div>
+    );
+};
 
 export default function About() {
     const aboutMeRef = useRef(null);
@@ -30,6 +64,7 @@ export default function About() {
                     <div className="profile-pic">
                         <img src={Profile} alt="Profile" />
                     </div>
+                    <SkillIcons />
                 </div>
             </div>
             <div className="experience" ref={experiencesRef}>
@@ -57,7 +92,7 @@ export default function About() {
                             <div className="logo"><img src={JSLogo} alt="JS Logo" /></div>
                             <div className="logo"><img src={HTMLLogo} alt="HTML Logo" /></div>
                             <div className="logo"><img src={CSSLogo} alt="CSS Logo" /></div>
-                            <div className="logo"></div>
+                            <div className="logo"><img src={GithubLogo} alt="Github Logo" /></div>
                         </div>
                     </div>
                     <div className="body-wrapper">
@@ -73,7 +108,7 @@ export default function About() {
                             </ul>
                         </div>
                         <div className="tools">
-                            <div className="logo"></div>
+                            <div className="logo"><img src={AngularLogo} alt="Angular" /></div>
                             <div className="logo"></div>
                             <div className="logo"></div>
                         </div>
@@ -148,7 +183,7 @@ export default function About() {
             <footer className="footer">
                 <div className="socials">
                     <a href="https://github.com/TangoCode99" target="_blank" rel="noreferrer">
-                        <img src={GithubIcon} alt="github logo" />
+                        <img src={GithubLogo} alt="github logo" />
                     </a>
                     <a href="mailto:jnham7@gmail.com" target="_blank" rel="noreferrer">
                         <img src={EmailIcon} alt="email logo" />

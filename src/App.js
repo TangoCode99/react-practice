@@ -3,7 +3,6 @@ import { Route, Routes } from 'react-router-dom';
 import Header from './components/header';
 import PhotoGallery from './components/photo-gallery';
 import About from './components/about';
-import Contact from './components/contact';
 import './App.css';
 
 function App() {

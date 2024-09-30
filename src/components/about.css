@@ -20,7 +20,7 @@
 
 .about-title {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.1em solid #18020C; /* The typwriter cursor */
+  border-right: 0.1em solid #18020c; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   animation: typing 3.5s steps(40, end), blink-caret 0.75s infinite normal;
@@ -43,13 +43,13 @@
     border-color: transparent;
   }
   50% {
-    border-color: #18020C;
+    border-color: #18020c;
   }
 }
 
 .name {
   display: inline;
-  color: #BBCBCB;
+  color: #bbcbcb;
 }
 
 .about-me-btn {
@@ -62,7 +62,7 @@
   align-items: center;
   margin: 25px auto;
   border-radius: 5px;
-  border: 2px solid #18020C;
+  border: 2px solid #18020c;
   background-color: white;
   padding: 10px 30px;
   cursor: pointer;
@@ -83,7 +83,7 @@
   background-color: #959595;
   opacity: 100%;
   padding: 25px 20px;
-  box-shadow: 25px 25px #18020C;
+  box-shadow: 25px 25px #18020c;
 }
 
 .left-side p {
@@ -91,6 +91,12 @@
   line-height: 2;
   word-spacing: 1.25;
   font-weight: 500;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .experience-btn {
@@ -103,7 +109,7 @@
   align-items: center;
   margin: 25px auto;
   border-radius: 5px;
-  border: 2px solid #18020C;
+  border: 2px solid #18020c;
   background-color: white;
   padding: 10px 30px;
   cursor: pointer;
@@ -131,6 +137,35 @@
   border-radius: 50%;
 }
 
+.skills-section {
+  margin-top: 50px;
+
+  .skills {
+    filter: invert(100%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  
+    .skill {
+      margin: 0px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    img {
+      height: 40px;
+      width: 40px;
+    }
+  
+    p {
+      font-size: 12px;
+    }
+  }
+}
+
+
 .experience {
   display: flex;
   flex-direction: column;
@@ -147,7 +182,7 @@
   margin: 35px 0px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;;
+  justify-content: space-evenly;
 }
 
 .body-wrapper {
@@ -192,11 +227,10 @@
 }
 
 .projects-title {
-
   h1 {
     margin: 0px;
     padding: 20px;
-    color: #BBCBCB;
+    color: #bbcbcb;
   }
 }
 
@@ -213,7 +247,7 @@
   margin: 10px auto;
   height: 90vh;
   width: 95vw;
-  background-color: #BBCBCB;
+  background-color: #bbcbcb;
 }
 
 .temp-img {
@@ -274,7 +308,7 @@
   button:hover {
     cursor: pointer;
     border-radius: 5px;
-    color: #BBCBCB;
+    color: #bbcbcb;
     background-color: #2f4f4f;
     transition: 0.75s ease;
   }
@@ -288,7 +322,7 @@
   align-items: center;
   height: 20vh;
   background-color: #2f4f4f;
-  color: #BBCBCB;
+  color: #bbcbcb;
 }
 
 .socials {
