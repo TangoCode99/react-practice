@@ -61,14 +61,10 @@ const ProjectsSection = () => {
                 {projects.map((project, index) => {
                     return (
                         <div className="project-wrapper" key={index}>
-                            <div className="wrapper-left">
-                                <div className="temp-img"></div>
-                            </div>
-                            <div className="wrapper-right">
-                                <h3>{project.title}</h3>
-                                <div className="project-desc">{project.desc}</div>
-                                <div className="project-repo">{project.repo}</div>
-                            </div>
+                            <div className="temp-img"></div>
+                            <h3>{project.title}</h3>
+                            <div className="project-desc">{project.desc}</div>
+                            <div className="project-repo">{project.repo}</div>
                         </div>
                     )
                 })}
@@ -86,7 +82,12 @@ export default function About() {
             <div className="about-header">
                 <h2>Welcome! I'm <div className="name">Tango</div>.</h2>
                 <h2 className="about-title">I'm a Front-End Software Developer.</h2>
-                <button className="about-me-btn" onClick={() => { aboutMeRef.current.scrollIntoView({ block: "start", behavior: "smooth" }); }}>About Me <ArrowDownwardIcon className="bounce"/></button>
+                <button className="about-me-btn" onClick={() => { aboutMeRef.current.scrollIntoView({ block: "start", behavior: "smooth" }); }}>About Me <ArrowDownwardIcon className="bounce" /></button>
+            </div>
+            <div className="waves-background">
+                <div className="wave"></div>
+                <div className="wave"></div>
+                <div className="wave"></div>
             </div>
             <div className="about-body" ref={aboutMeRef}>
                 <div className="left-side">
@@ -128,7 +129,7 @@ export default function About() {
                         <li>Data Visualization</li>
                         <li>Machine Learning</li>
                     </ul>
-                    <button className="experience-btn" onClick={() => { experiencesRef.current.scrollIntoView({ bloc: "start", behavior: "smooth" }); }}>Experiences <ArrowDownwardIcon className="bounce"/></button>
+                    <button className="experience-btn" onClick={() => { experiencesRef.current.scrollIntoView({ bloc: "start", behavior: "smooth" }); }}>Experiences <ArrowDownwardIcon className="bounce" /></button>
                 </div>
             </div>
             <div className="experience" ref={experiencesRef}>

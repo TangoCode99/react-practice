@@ -88,6 +88,61 @@
   cursor: pointer;
 }
 
+.waves-background {
+  position: relative;
+  overflow: auto;
+  background-size: 400% 400%;
+  background-attachment: fixed;
+}
+
+.wave {
+  background: #2f4f4f;
+  border-radius: 1000% 1000% 0 0;
+  position: fixed;
+  width: 200%;
+  height: 10em;
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+  bottom: -1.25em;
+  animation: wave 15s linear reverse infinite;
+  opacity: 0.5;
+}
+
+.wave:nth-of-type(3) {
+  bottom: -2.5em;
+  animation: wave 20s -1s reverse infinite;
+  opacity: 0.9;
+}
+
+@keyframes wave {
+  2% {
+      transform: translateX(1);
+  }
+
+  25% {
+      transform: translateX(-25%);
+  }
+
+  50% {
+      transform: translateX(-50%);
+  }
+
+  75% {
+      transform: translateX(-25%);
+  }
+
+  100% {
+      transform: translateX(1);
+  }
+}
+
 .about-body {
   display: flex;
   flex-direction: row;
@@ -100,7 +155,7 @@
 }
 
 .left-side {
-  width: 35rem;
+  width: 30rem;
   text-align: left;
   background-color: #959595;
   opacity: 100%;
@@ -327,31 +382,34 @@
 }
 
 .projects {
-  height: 300vh;
+  height: 90vh;
   background-color: #2f4f4f;
 }
 
 .projects-title {
+  margin: 0 auto;
+  width: 50%;
+  border-bottom: 2px solid white;
   h1 {
     margin: 0px;
-    padding: 20px;
+    padding: 30px 0px 20px;
     color: white;
   }
 }
 
 .projects-body {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .project-wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  margin: 10px auto;
-  height: 90vh;
-  width: 95vw;
+  margin: 30px auto;
+  padding: 0 0 20px;
   background-color: #bbcbcb;
+  border-radius: 5%;
 
   .wrapper-right {
     text-align: left;
@@ -359,8 +417,9 @@
 }
 
 .temp-img {
-  width: 500px;
-  height: 500px;
+  border-radius: 5% 5% 0 0;
+  width: 300px;
+  height: 300px;
   background-color: #808080;
 }
 
@@ -429,7 +488,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 20vh;
+  height: 15vh;
   background-color: #2f4f4f;
   color: #bbcbcb;
 }
