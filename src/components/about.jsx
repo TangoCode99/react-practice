@@ -84,6 +84,9 @@ export default function About() {
     return (
         <div className="about-wrapper">
             <div className="about-header">
+                <div className="wave"></div>
+                <div className="wave"></div>
+                <div className="wave"></div>
                 <h2>Welcome! I'm <div className="name">Tango</div>.</h2>
                 <h2 className="about-title">I'm a Front-End Software Developer.</h2>
                 <button className="about-me-btn" onClick={() => { aboutMeRef.current.scrollIntoView({ block: "start", behavior: "smooth" }); }}>About Me <ArrowDownwardIcon className="bounce"/></button>
