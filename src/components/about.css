@@ -346,11 +346,14 @@
 }
 
 .body-wrapper {
-  background-color: darkslategray;
+  position: relative;
+  z-index: 1;
+  background-color: #2f4f4f;
   color: white;
   padding: 0px 5px 10px 5px;
-
-  box-shadow: -15px 15px rgb(170, 170, 170);
+  border: 1px solid black;
+  box-shadow: -10px 10px rgba(130, 130, 130, 0.6);
+  border-radius: 2px;
 
   h3 {
     text-align: left;
@@ -410,6 +413,7 @@
   padding: 0 0 20px;
   background-color: #bbcbcb;
   border-radius: 5%;
+  height: 60vh;
 
   .wrapper-right {
     text-align: left;
@@ -418,8 +422,8 @@
 
 .temp-img {
   border-radius: 5% 5% 0 0;
-  width: 300px;
-  height: 300px;
+  width: 20vw;
+  height: 50vh;
   background-color: #808080;
   align-content: center;
 }
