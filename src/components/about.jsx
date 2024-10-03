@@ -61,7 +61,7 @@ const ProjectsSection = () => {
                 {projects.map((project, index) => {
                     return (
                         <div className="project-wrapper" key={index}>
-                            <div className="temp-img"></div>
+                            <div className="temp-img">Coming Soon!</div>
                             <h3>{project.title}</h3>
                             <div className="project-desc">{project.desc}</div>
                             <div className="project-repo">{project.repo}</div>
