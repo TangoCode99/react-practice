@@ -9,7 +9,7 @@ import Git from "../icons/git.svg";
 import HTMLLogo from "../icons/html5.svg";
 import JSLogo from "../icons/javascript.svg";
 import MUILogo from "../icons/mui.svg";
-import EmailIcon from "../icons/emailIcon.png";
+import EmailIcon from "../icons/email.svg";
 import LinkedinLogo from "../icons/linkedin.svg";
 import { GradPhoto, Profile, UGA } from "../assets";
 import "./about.css";
