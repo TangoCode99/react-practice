@@ -86,13 +86,13 @@ export default function About() {
             <div className="about-header">
                 <h2>Welcome! I'm <div className="name">Tango</div>.</h2>
                 <h2 className="about-title">I'm a Front-End Software Developer.</h2>
-                <button className="about-me-btn" onClick={() => { aboutMeRef.current.scrollIntoView({ block: "start", behavior: "smooth" }); }}>About Me <ArrowDownwardIcon /></button>
+                <button className="about-me-btn" onClick={() => { aboutMeRef.current.scrollIntoView({ block: "start", behavior: "smooth" }); }}>About Me <ArrowDownwardIcon className="bounce"/></button>
             </div>
             <div className="about-body" ref={aboutMeRef}>
                 <div className="left-side">
                     <div className="body-header">About</div>
                     <p>{aboutMe}</p>
-                    <button className="experience-btn" onClick={() => { educationRef.current.scrollIntoView({ bloc: "start", behavior: "smooth" }); }}>Education <ArrowDownwardIcon /></button>
+                    <button className="education-btn" onClick={() => { educationRef.current.scrollIntoView({ bloc: "start", behavior: "smooth" }); }}>Education <ArrowDownwardIcon className="bounce" /></button>
                 </div>
                 <div className="right-side">
                     <div className="profile-pic">
@@ -128,7 +128,7 @@ export default function About() {
                         <li>Data Visualization</li>
                         <li>Machine Learning</li>
                     </ul>
-                    <button className="experience-btn" onClick={() => { experiencesRef.current.scrollIntoView({ bloc: "start", behavior: "smooth" }); }}>Experiences <ArrowDownwardIcon /></button>
+                    <button className="experience-btn" onClick={() => { experiencesRef.current.scrollIntoView({ bloc: "start", behavior: "smooth" }); }}>Experiences <ArrowDownwardIcon className="bounce"/></button>
                 </div>
             </div>
             <div className="experience" ref={experiencesRef}>

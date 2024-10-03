@@ -47,6 +47,22 @@
   }
 }
 
+.bounce {
+  animation: bounce 4s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0px);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
 .name {
   display: inline;
   color: #bbcbcb;
@@ -99,7 +115,8 @@
   align-items: center;
 }
 
-.experience-btn {
+.education-btn {
+  width: 150px;
   font-size: 15px;
   text-align: center;
   display: flex;
@@ -110,7 +127,7 @@
   border-radius: 5px;
   border: 2px solid #18020c;
   background-color: white;
-  padding: 10px 30px;
+  padding: 10px 20px;
   cursor: pointer;
 }
 
@@ -228,6 +245,22 @@
     flex-direction: row;
     justify-content: space-between;
   }
+}
+
+.experience-btn {
+  width: 160px;
+  font-size: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px auto 5px;
+  border-radius: 5px;
+  border: 2px solid #18020c;
+  background-color: white;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
 .experience {
@@ -369,7 +402,7 @@
     border: none;
     border-bottom: 5px solid #2f4f4f;
     background-color: white;
-    margin: 3px 2px;
+    margin: 5px 2px;
     padding: 10px;
     width: 90px;
     align-self: end;
@@ -378,7 +411,7 @@
   button:hover {
     cursor: pointer;
     border-radius: 5px;
-    color: #bbcbcb;
+    color: white;
     background-color: #2f4f4f;
     transition: 0.75s ease;
   }
