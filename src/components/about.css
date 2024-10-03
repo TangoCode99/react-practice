@@ -354,6 +354,7 @@
   border: 1px solid black;
   box-shadow: -10px 10px rgba(130, 130, 130, 0.6);
   border-radius: 2px;
+  width: 30vw;
 
   h3 {
     text-align: left;
@@ -377,7 +378,8 @@
 .wrapper-info {
   font-size: 15px;
   text-align: left;
-  width: 400px;
+  width: inherit;
+  text-wrap: wrap;
 
   li {
     margin: 10px 10px 0px 0px;
