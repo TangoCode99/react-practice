@@ -11,3 +11,5 @@ export const SpaceNeedle = require('../assets/spaceneedle.jpg');
 export const Vessel = require('../assets/vessel.jpeg');
 export const WaterFall = require('../assets/waterfall.jpg');
 export const Profile = require('../assets/profile.JPG');
+export const UGA = require('../assets/uga.jpg');
+export const GradPhoto = require('../assets/graduation.jpg');

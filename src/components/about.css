@@ -100,14 +100,13 @@
 }
 
 .experience-btn {
-  font-size: 20px;
-  width: 200px;
+  font-size: 15px;
   text-align: center;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 25px auto;
+  margin: 20px auto 5px;
   border-radius: 5px;
   border: 2px solid #18020c;
   background-color: white;
@@ -120,7 +119,7 @@
   font-size: 30px;
   font-weight: 700;
   border-bottom: 1px solid white;
-  width: 30%;
+  width: 20%;
   padding: 5px 0px;
 }
 
@@ -145,7 +144,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-  
+
     .skill {
       margin: 0px 20px;
       display: flex;
@@ -153,33 +152,100 @@
       justify-content: center;
       align-items: center;
     }
-  
+
     img {
       height: 40px;
       width: 40px;
     }
-  
+
     p {
       font-size: 12px;
+      text-transform: uppercase;
     }
   }
 }
 
+.education {
+  display: flex;
+  flex-direction: row;
+  height: 75vh;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .education-header {
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+  }
+
+  img {
+    border: 5px solid #2f4f4f;
+  }
+  
+  #uga {
+    position: relative;
+    height: 350px;
+    top: 100px;
+    z-index: 1;
+  }
+
+  #grad {
+    position: relative;
+    top: -25px;
+    right: 125px;
+    width: 200px;
+    border-radius: 50%;
+    z-index: 3;
+    box-shadow: 0px 0px 20px black;
+  }
+
+  .education-right {
+    background-color: #2f4f4f;
+    border: 10px solid #bbcbcb;
+    color: white;
+    font: inherit;
+    text-align: left;
+    padding: 25px;
+    width: 45vw;
+    margin-right: 40px;
+
+    h4 {
+      margin: 20px 0px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+
+    ul {
+      margin-block-start: 0px;
+      margin-block-end: 0px;
+      font-size: 12px;
+    }
+  }
+
+  .education-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 
 .experience {
+  font: inherit;
   display: flex;
   flex-direction: column;
-  height: 120vh;
+  height: 105vh;
 }
 
 .experience-title {
   border-bottom: 2px solid black;
-  width: 70%;
+  width: 50%;
   margin: 0px auto;
+  padding: none;
 }
 
 .experience-body {
-  margin: 35px 0px;
+  margin: 20px 0px 30px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -188,8 +254,27 @@
 .body-wrapper {
   background-color: darkslategray;
   color: white;
-  margin: 0px 5px;
   padding: 0px 5px 10px 5px;
+
+  box-shadow: -15px 15px rgb(170, 170, 170);
+
+  h3 {
+    text-align: left;
+    margin: 20px 0px 15px 20px;
+  }
+}
+
+.role-sec {
+  margin: 0px 20px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+
+  h5 {
+    margin: 0px;
+  }
 }
 
 .wrapper-info {
@@ -198,27 +283,8 @@
   width: 400px;
 
   li {
-    margin: 10px 0px;
+    margin: 10px 10px 0px 0px;
   }
-}
-
-.tools {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.logo {
-  height: 35px;
-  width: 35px;
-  border-radius: 2px;
-  margin: 0px 10px;
-}
-
-.logo img {
-  filter: invert(100%);
-  height: 35px;
-  width: 35px;
 }
 
 .projects {
@@ -230,7 +296,7 @@
   h1 {
     margin: 0px;
     padding: 20px;
-    color: #bbcbcb;
+    color: white;
   }
 }
 
@@ -243,11 +309,14 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
   margin: 10px auto;
   height: 90vh;
   width: 95vw;
   background-color: #bbcbcb;
+
+  .wrapper-right {
+    text-align: left;
+  }
 }
 
 .temp-img {
@@ -298,6 +367,7 @@
     font: inherit;
     text-transform: uppercase;
     border: none;
+    border-bottom: 5px solid #2f4f4f;
     background-color: white;
     margin: 3px 2px;
     padding: 10px;
@@ -327,6 +397,9 @@
 
 .socials {
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 200px;
 
   img {
     margin: 0px 5px;
