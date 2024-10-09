@@ -11,7 +11,15 @@ import {
     Sorrento,
     SpaceNeedle,
     Vessel,
-    WaterFall
+    WaterFall,
+    BeechMtn,
+    Epcot,
+    Flower,
+    Jekyll,
+    MercedesBenz,
+    TruistPark,
+    VeniceBeach,
+    Williamsburg
 } from "../assets";
 import { useEffect, useState } from "react";
 import "./photo-gallery.css";
@@ -29,6 +37,14 @@ const images = [
     { src: SpaceNeedle, alt: 'Space Needle', desc: 'Space Needle' },
     { src: Vessel, alt: 'The Vessel', desc: 'The Vessel' },
     { src: WaterFall, alt: 'Waterfall', desc: 'Olallie State Park' },
+    { src: BeechMtn, alt: 'Beech Mtn', desc: 'Beech Mountain' },
+    { src: Epcot, alt: 'Epcot World', desc: 'Epcot World' },
+    { src: Flower, alt: 'Flower', desc: 'Blue Flower' },
+    { src: Jekyll, alt: 'Jekyll Island', desc: 'Jekyll Island' },
+    { src: MercedesBenz, alt: 'Mercedes-Benz', desc: 'Mercedes-Benz' },
+    { src: TruistPark, alt: 'Truist Park', desc: 'Truist Park' },
+    { src: VeniceBeach, alt: 'Lifeguard Post', desc: 'Venice Beach' },
+    { src: Williamsburg, alt: 'Williamsburg Bridge', desc: 'Williamsburg Bridge' },
 ];
 
 const Gallery = ({ images }) => {
