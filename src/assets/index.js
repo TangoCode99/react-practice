@@ -21,3 +21,5 @@ export const MercedesBenz = require('../assets/mercedesbenz.jpg');
 export const TruistPark = require('../assets/truistpark.JPG');
 export const VeniceBeach = require('../assets/venicebeach.JPG');
 export const Williamsburg = require('../assets/williamsburg.JPG')
+export const Calculator = require('../assets/Calculator.png');
+export const ToDoApp = require('../assets/todoapp.png');

@@ -1,6 +1,7 @@
 import React from "react";
 import { useRef } from "react";
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import AngularLogo from "../icons/angular.svg";
 import ReactLogo from "../icons/react.svg";
 import CSSLogo from "../icons/css3.svg";
@@ -11,8 +12,9 @@ import JSLogo from "../icons/javascript.svg";
 import MUILogo from "../icons/mui.svg";
 import EmailIcon from "../icons/email.svg";
 import LinkedinLogo from "../icons/linkedin.svg";
-import { GradPhoto, Profile, UGA } from "../assets";
+import { GradPhoto, Profile, UGA, Calculator, ToDoApp } from "../assets";
 import "./about.css";
+import { Link } from "@mui/material";
 
 const aboutMe = "Hi! I'm Tango, a frontend developer with a passion for creating seamless and engaging user " +
     "experiences. With two-three years of experience in the corporate world, I specialize in building modern, " +
@@ -31,9 +33,38 @@ const icons = [
 ]
 
 const projects = [
-    { title: "Basic Calculator", desc: "Description", repo: "Link to Repo" },
-    { title: "To-Do List", desc: "Description", repo: "Link to Repo" },
-    { title: "Random Quote Generator", desc: "Description", repo: "Link to Repo" }
+    {
+        name: 'Simple Calculator',
+        image: Calculator,
+        description: 'A lightweight calculator built with React for quick and accurate calculations. ' 
+        + 'This project reinforced key development concepts such as handling user input, state management, ' 
+        + 'and floating-point precision challenges. It also provided an opportunity to enhance UI/UX design ' 
+        + 'and deploy a functional web application.',
+        techStack: ['React', 'Tailwind CSS', 'Vercel'],
+        features: [
+            'Handles basic arithmetic operations efficiently',
+            'Clean and minimal UI for a smooth user experience',
+            'Deployed on Vercel for instant access',
+        ],
+        demoLink: 'https://tango-simple-calculator.vercel.app/',
+        codeLink: 'https://github.com/TangoCode99/simple-calculator',
+    },
+    {
+        name: 'To-Do Task App',
+        image: ToDoApp,
+        description: 'A simple and intuitive task management app designed to help users track their daily tasks efficiently. '
+        + 'This project focuses on essential functionality—adding tasks, updating their status, and removing them when completed. '
+        + 'The goal was to create a clean and minimal interface while ensuring seamless task management. Through this project, ' 
+        + 'I strengthened my understanding of React state management and user interactions.',
+        techStack: ['React', 'Tailwind CSS', 'Vercel', 'PostgreSQL'],
+        features: [
+            'Add, edit, and delete tasks seamlessly',
+            'Local storage support for task persistence',
+            'Responsive design for mobile and desktop',
+        ],
+        demoLink: 'https://simple-todo-eight-lovat.vercel.app/',
+        codeLink: 'https://github.com/TangoCode99/simple-todo',
+    },
 ]
 
 const SkillIcons = () => {
@@ -56,18 +87,35 @@ const SkillIcons = () => {
 const ProjectsSection = () => {
     return (
         <div className="projects">
-            <div className="projects-title"><h1>Projects</h1></div>
+            <h2>Projects</h2>
             <div className="projects-body">
-                {projects.map((project, index) => {
-                    return (
-                        <div className="project-wrapper" key={index}>
-                            <div className="temp-img">Coming Soon!</div>
-                            <h3>{project.title}</h3>
-                            <div className="project-desc">{project.desc}</div>
-                            <div className="project-repo">{project.repo}</div>
+                {projects.map((project, index) => (
+                    <div key={index} className="project-wrapper">
+                        <div className="left-div">
+                            <img src={project.image} alt={project.name} width={600} height={350} className="project-img" />
                         </div>
-                    )
-                })}
+                        <div className="right-div">
+                            <h3>{project.name}</h3>
+                            <p>{project.description}</p>
+                            <h4>Tech Stack:</h4>
+                            <ul>
+                                {project.techStack.map((tech, i) => (
+                                    <li key={i} className="">{tech}</li>
+                                ))}
+                            </ul>
+                            <h4>Key Features:</h4>
+                            <ul>
+                                {project.features.map((feature, i) => (
+                                    <li key={i}>{feature}</li>
+                                ))}
+                            </ul>
+                            <div className="link-div">
+                                <Link href={project.demoLink} className="link"><ArrowForwardIcon fontSize="small"/> Go to Live Demo</Link>
+                                <Link href={project.codeLink} className="link"><ArrowForwardIcon fontSize="small"/> Go to Code</Link>
+                            </div>
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
     );
