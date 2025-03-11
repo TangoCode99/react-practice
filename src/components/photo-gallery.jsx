@@ -19,12 +19,36 @@ import {
     MercedesBenz,
     TruistPark,
     VeniceBeach,
-    Williamsburg
+    Williamsburg,
+    IndianBeach,
+    CannonBeach,
+    EcolaPark,
+    EndertsBeach,
+    IndianBeachRocks,
+    MountHood,
+    Multnomah,
+    Portland,
+    PortOrford,
+    AustralianShepherd,
+    SouthFalls,
+    WahclellaFalls
 } from "../assets";
 import { useEffect, useState } from "react";
 import "./photo-gallery.css";
 
 const images = [
+    { src: IndianBeach, alt: 'Indian Beach', desc: 'Indian Beach' },
+    { src: CannonBeach, alt: 'Cannon Beach', desc: 'Cannon Beach' },
+    { src: EcolaPark, alt: 'Ecola State Park', desc: 'Ecola State Park' },
+    { src: EndertsBeach, alt: 'Enderts Beach', desc: 'Enderts Beach' },
+    { src: IndianBeachRocks, alt: 'Indian Beach Rocks', desc: 'Indian Beach Rocks' },
+    { src: MountHood, alt: 'Mount Hood', desc: 'Mount Hood' },
+    { src: Multnomah, alt: 'Multnomah Falls', desc: 'Multnomah Falls' },
+    { src: Portland, alt: 'Portland, Oregon', desc: 'Portland, Oregon' },
+    { src: PortOrford, alt: 'Port Orford', desc: 'Port Orford' },
+    { src: SouthFalls, alt: 'South Falls', desc: 'South Falls' },
+    { src: AustralianShepherd, alt: 'Australian Shepherd', desc: 'Australian Shepherd' },
+    { src: WahclellaFalls, alt: 'Wahclella Falls', desc: 'Wahclella Falls' },
     { src: Rialto, alt: 'Rialto Beach', desc: 'Rialto Beach' },
     { src: CapriBeach, alt: 'Capri Beach', desc: 'Marina Grande Beach' },
     { src: Capri, alt: 'Capri', desc: 'Capri' },
