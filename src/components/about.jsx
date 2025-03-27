@@ -12,7 +12,7 @@ import JSLogo from "../icons/javascript.svg";
 import MUILogo from "../icons/mui.svg";
 import EmailIcon from "../icons/email.svg";
 import LinkedinLogo from "../icons/linkedin.svg";
-import { GradPhoto, Profile, UGA, Calculator, ToDoApp } from "../assets";
+import { GradPhoto, Profile, UGA, Calculator, ToDoApp, Spotify } from "../assets";
 import "./about.css";
 import { Link } from "@mui/material";
 
@@ -64,6 +64,21 @@ const projects = [
         ],
         demoLink: 'https://simple-todo-eight-lovat.vercel.app/',
         codeLink: 'https://github.com/TangoCode99/simple-todo',
+    },
+    {
+        name: 'Spotify-Inspired Portfolio',
+        image: Spotify,
+        description: 'A recreation of the Spotify desktop application using Next.js and Tailwind CSS, ' + 
+        'showcasing my ability to build responsive and modern UIs. This project demonstrates my front-end' + 
+        ' development skills, component-based architecture, and attention to detail in replicating real-world applications.',
+        techStack: ['React', 'Tailwind CSS', 'Vercel'],
+        features: [
+            'A near replica of Spotify desktop application',
+            'Familiarization and usage of TailwindCSS',
+            'Responsive design for Desktop',
+        ],
+        demoLink: 'https://tango-spotify.vercel.app/',
+        codeLink: 'https://github.com/TangoCode99/spotify-profile',
     },
 ]
 

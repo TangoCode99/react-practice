@@ -9,8 +9,8 @@ export default function Header() {
                 <div id="wrapper">
                     <nav>
                         <ul>
-                            <li><Link to="/about">About</Link></li>
-                            <li><Link to="/">Latest Photos</Link></li>
+                            <li><Link to="/">About</Link></li>
+                            <li><Link to="/photos">Latest Photos</Link></li>
                         </ul>
                     </nav>
                 </div>

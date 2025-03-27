@@ -23,6 +23,7 @@ export const VeniceBeach = require('../assets/venicebeach.JPG');
 export const Williamsburg = require('../assets/williamsburg.JPG')
 export const Calculator = require('../assets/Calculator.png');
 export const ToDoApp = require('../assets/todoapp.png');
+export const Spotify = require('../assets/spotify.png');
 export const IndianBeach = require('../assets/beach.jpg');
 export const CannonBeach = require('../assets/cannonbeach.jpg');
 export const EcolaPark = require('../assets/ecola.jpg');
