@@ -13,7 +13,7 @@ import MUILogo from "../icons/mui.svg";
 import EmailIcon from "../icons/email.svg";
 import LinkedinLogo from "../icons/linkedin.svg";
 import { GradPhoto, Profile, UGA, Calculator, ToDoApp, Spotify } from "../assets";
-import "./about.css";
+import "../styles/about.css"
 import { Link } from "@mui/material";
 
 const aboutMe = "Hi! I'm Tango, a frontend developer with a passion for creating seamless and engaging user " +

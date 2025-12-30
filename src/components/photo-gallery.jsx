@@ -34,7 +34,7 @@ import {
     WahclellaFalls
 } from "../assets";
 import { useEffect, useState } from "react";
-import "./photo-gallery.css";
+import "../styles/photo-gallery.css";
 
 const images = [
     { src: IndianBeach, alt: 'Indian Beach', desc: 'Indian Beach' },
