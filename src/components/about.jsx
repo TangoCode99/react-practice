@@ -107,7 +107,8 @@ const ProjectsSection = () => {
                 {projects.map((project, index) => (
                     <div key={index} className="project-wrapper">
                         <div className="left-div">
-                            <img src={project.image} alt={project.name} width={600} height={350} className="project-img" />
+                            {/* Removed fixed width/height — CSS now controls sizing responsively */}
+                            <img src={project.image} alt={project.name} className="project-img" />
                         </div>
                         <div className="right-div">
                             <h3>{project.name}</h3>
@@ -211,7 +212,7 @@ export default function About() {
                                 <li>Implemented 20+ new features and enhancements based on business requirements and stakeholder feedback, leading to a 20% increase in user engagement and a 15% reduction in customer support queries.</li>
                                 <li>Collaborated with product owners and stakeholders to define clear and achievable sprint goals, resulting in a 90% sprint completion rate over 12 months and a 10% increase in on-time project deliveries.</li>
                                 <li>Participated in 50+ code reviews and pair programming sessions to foster knowledge sharing and improved code quality by 30% across the team and reduced post-deployment bugs by 15%.</li>
-                                <li>Conducted unit testing and developed performance scripts to track the software’s capability/stability as more users are on boarded to the app.</li>
+                                <li>Conducted unit testing and developed performance scripts to track the software's capability/stability as more users are on boarded to the app.</li>
                                 <li>Identified and fixed over 100+ bugs in the codebase, improving software stability and user experience by 25%.</li>
                             </ul>
                         </div>
