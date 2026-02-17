@@ -36,3 +36,4 @@ export const PortOrford = require('../assets/portorford.jpg');
 export const AustralianShepherd = require('../assets/shepherd.jpg');
 export const SouthFalls = require('../assets/southfalls.jpg');
 export const WahclellaFalls = require('../assets/wahclella.jpg');
+export const KitchenInventory = require('../assets/kitchenInventory.JPG');
