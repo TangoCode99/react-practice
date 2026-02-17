@@ -36,15 +36,14 @@ const projects = [
     {
         name: 'Kitchen Inventory',
         image: KitchenInventory,
-        description: 'I built a kitchen inventory app to help reduce food waste and keep track of what I already have. ' + 
-        'With this tool, I can also start becoming more mindful of my spending and not to overbuy anything. Through this project, Ive learned ' +
-        'how to manage local data persistent with SQLite, synchronizing UI state with database, and thinking more carefully about ' +
-        'data modeling before implementation',
+        description: 'I built a mobile kitchen inventory app to reduce food waste and prevent duplicate grocery purchases. ' +
+        'The app allows the users to track items with quantities and expiration dates while persisting data locally using ' +
+        'SQLite for offline reliability.',
         techStack: ['React Native + Expo', 'SQLite', 'TypeScript'],
         features: [
-            'SQLite for relational data, complex queries, better for scaling',
-            'Works offline, privacy friendly',
-            'Simple UI for pleasant user experience'
+            'Structured SQLite schema with enforced constraints for data integrity',
+            'Offline-first designed with persistent local storage',
+            'Query support for filteriny by category and expiration date'
         ]
     },
     {
