@@ -1,51 +1,80 @@
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 5fr)); /* Adjust the minmax values for desired width */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 5fr));
   gap: 0px;
 }
 
+/* ─── Per-item entrance animation ───────────────────────────────────────────
+   Each item starts invisible and slightly below its final position.
+   The JS Intersection Observer adds --visible when the item nears the viewport,
+   triggering the transition. transitionDelay is set inline per-item for stagger.
+   will-change: opacity, transform hints the compositor to keep the layer cached,
+   which prevents the repaint flicker on fast scroll.
+*/
 .gallery-item {
   position: relative;
   width: 100%;
   height: 450px;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
-  opacity: 0; /* Initially hidden */
-  transform: translateY(20px); /* Start from slightly below */
-  transition: opacity 1s ease, transform 1s ease; /* Smooth transition */
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+
+  /* Keeps decoded image textures on the GPU layer so fast scrolling
+     doesn't cause re-decoding / repaint flicker */
+  will-change: opacity, transform;
+
+  /* Prevents layout thrashing when neighbouring items animate */
+  contain: layout style;
+}
+
+.gallery-item--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Once settled, release the will-change hint to free GPU memory */
+.gallery-item--visible.animation-done {
+  will-change: auto;
 }
 
 .gallery-item img {
   width: 100%;
-  height: 450px;
-  object-fit: cover; /* Ensures the image fills the space while preserving aspect ratio */
+  height: 100%;
+  object-fit: cover;
+
+  /* Smooth sub-pixel rendering during scroll */
+  image-rendering: auto;
+
+  /* Avoids a layout shift while the image decodes */
+  display: block;
 }
 
-/* When 'loaded' class is added, images will fade in and move upwards */
-.gallery-grid.loaded .gallery-item {
-  opacity: 1;
-  transform: translateY(0); /* Move to original position */
-}
-
-/* Styling for the description */
+/* ─── Hover description overlay ─────────────────────────────────────────── */
 .description {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
-  color: #fff; /* Text color */
+  color: #fff;
   font-size: 25px;
   text-align: center;
   padding: 10px;
+
+  /* Don't let the overlay interfere with scroll performance */
+  pointer-events: none;
 }
 
-/* Reveal the description on hover */
 .gallery-item:hover .description {
   opacity: 1;
+  pointer-events: auto;
 }

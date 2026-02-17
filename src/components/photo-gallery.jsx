@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
     Rialto,
     CapriBeach,
@@ -33,7 +33,6 @@ import {
     SouthFalls,
     WahclellaFalls
 } from "../assets";
-import { useEffect, useState } from "react";
 import "../styles/photo-gallery.css";
 
 const images = [
@@ -71,26 +70,89 @@ const images = [
     { src: Williamsburg, alt: 'Williamsburg Bridge', desc: 'Williamsburg Bridge' },
 ];
 
-const Gallery = ({ images }) => {
-    const [loaded, setLoaded] = useState(false);
-
-    // Trigger the images to load in with animation after component mounts
+// Pre-warm the browser image cache for all assets on mount.
+// Since images are bundled JS imports (not network URLs), this forces
+// the browser to decode & retain them so fast scrolling never re-fetches.
+function useImagePreloader(imageSrcs) {
     useEffect(() => {
-        setTimeout(() => setLoaded(true), 100); // Slight delay for smooth transition
+        imageSrcs.forEach((src) => {
+            const img = new Image();
+            img.src = src;
+        });
+    }, []); // eslint-disable-line react-hooks/exhaustive-deps
+}
+
+// Individual gallery item with Intersection Observer for entrance animation.
+// Uses a large rootMargin so the animation triggers well before the item
+// is visible — keeping the UX snappy without a jarring pop-in.
+const GalleryItem = React.memo(({ image, index }) => {
+    const ref = useRef(null);
+    const [visible, setVisible] = useState(false);
+
+    useEffect(() => {
+        const el = ref.current;
+        if (!el) return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setVisible(true);
+                    observer.disconnect(); // Only animate in once
+                }
+            },
+            {
+                // Large margin: start animating 300px before the item enters view
+                rootMargin: "300px 0px 300px 0px",
+                threshold: 0,
+            }
+        );
+
+        observer.observe(el);
+        return () => observer.disconnect();
     }, []);
+
+    // Stagger delay capped at 500ms so items deep in the grid don't wait forever
+    const delay = Math.min(index * 60, 500);
+
     return (
-        <div className={`gallery-grid ${loaded ? 'loaded' : ''}`}>
+        <div
+            ref={ref}
+            className={`gallery-item ${visible ? "gallery-item--visible" : ""}`}
+            style={{ transitionDelay: visible ? `${delay}ms` : "0ms" }}
+        >
+            {/*
+              No loading="lazy" — images are already local JS bundle imports.
+              decoding="async" offloads JPEG/PNG decode to a worker thread so
+              the main thread (and scroll) stays smooth.
+              fetchpriority="low" for below-fold images keeps LCP fast.
+            */}
+            <img
+                src={image.src}
+                alt={image.alt}
+                decoding="async"
+                fetchpriority={index < 6 ? "high" : "low"}
+            />
+            <div className="description">
+                <p>{image.desc}</p>
+            </div>
+        </div>
+    );
+});
+
+GalleryItem.displayName = "GalleryItem";
+
+const Gallery = ({ images }) => {
+    // Kick off pre-loading for every image src as soon as the component mounts
+    useImagePreloader(images.map((img) => img.src));
+
+    return (
+        <div className="gallery-grid">
             {images.map((image, index) => (
-                <div key={index} className="gallery-item">
-                    <img src={image.src} alt={image.alt} />
-                    <div className="description">
-                        <p>{image.desc}</p>
-                    </div>
-                </div>
+                <GalleryItem key={image.alt} image={image} index={index} />
             ))}
         </div>
     );
-}
+};
 
 export default function PhotoGallery() {
     return (
