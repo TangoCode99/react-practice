@@ -43,7 +43,7 @@ const projects = [
         features: [
             'Structured SQLite schema with enforced constraints for data integrity',
             'Offline-first designed with persistent local storage',
-            'Query support for filteriny by category and expiration date'
+            'Query support for filtering by category and expiration date'
         ]
     },
     {
