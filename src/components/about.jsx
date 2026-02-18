@@ -37,8 +37,8 @@ const projects = [
         name: 'Kitchen Inventory',
         image: KitchenInventory,
         description: 'I built a mobile kitchen inventory app to reduce food waste and prevent duplicate grocery purchases. ' +
-        'The app allows the users to track items with quantities and expiration dates while persisting data locally using ' +
-        'SQLite for offline reliability.',
+            'The app allows the users to track items with quantities and expiration dates while persisting data locally using ' +
+            'SQLite for offline reliability.',
         techStack: ['React Native + Expo', 'SQLite', 'TypeScript'],
         features: [
             'Structured SQLite schema with enforced constraints for data integrity',
@@ -49,9 +49,9 @@ const projects = [
     {
         name: 'Spotify-Inspired Portfolio',
         image: Spotify,
-        description: 'A recreation of the Spotify desktop application using Next.js and Tailwind CSS, ' + 
-        'showcasing my ability to build responsive and modern UIs. This project demonstrates my front-end' + 
-        ' development skills, component-based architecture, and attention to detail in replicating real-world applications.',
+        description: 'A recreation of the Spotify desktop application using Next.js and Tailwind CSS, ' +
+            'showcasing my ability to build responsive and modern UIs. This project demonstrates my front-end' +
+            ' development skills, component-based architecture, and attention to detail in replicating real-world applications.',
         techStack: ['React', 'Tailwind CSS', 'Vercel'],
         features: [
             'A near replica of Spotify desktop application',
@@ -64,10 +64,10 @@ const projects = [
     {
         name: 'Simple Calculator',
         image: Calculator,
-        description: 'A lightweight calculator built with React for quick and accurate calculations. ' 
-        + 'This project reinforced key development concepts such as handling user input, state management, ' 
-        + 'and floating-point precision challenges. It also provided an opportunity to enhance UI/UX design ' 
-        + 'and deploy a functional web application.',
+        description: 'A lightweight calculator built with React for quick and accurate calculations. '
+            + 'This project reinforced key development concepts such as handling user input, state management, '
+            + 'and floating-point precision challenges. It also provided an opportunity to enhance UI/UX design '
+            + 'and deploy a functional web application.',
         techStack: ['React', 'Tailwind CSS', 'Vercel'],
         features: [
             'Handles basic arithmetic operations efficiently',
@@ -81,9 +81,9 @@ const projects = [
         name: 'To-Do Task App',
         image: ToDoApp,
         description: 'A simple and intuitive task management app designed to help users track their daily tasks efficiently. '
-        + 'This project focuses on essential functionality—adding tasks, updating their status, and removing them when completed. '
-        + 'The goal was to create a clean and minimal interface while ensuring seamless task management. Through this project, ' 
-        + 'I strengthened my understanding of React state management and user interactions.',
+            + 'This project focuses on essential functionality—adding tasks, updating their status, and removing them when completed. '
+            + 'The goal was to create a clean and minimal interface while ensuring seamless task management. Through this project, '
+            + 'I strengthened my understanding of React state management and user interactions.',
         techStack: ['React', 'Tailwind CSS', 'Vercel', 'PostgreSQL'],
         features: [
             'Add, edit, and delete tasks seamlessly',
@@ -139,11 +139,11 @@ const ProjectsSection = () => {
                                 ))}
                             </ul>
                             <div className="link-div">
-                                {project.demoLink && 
-                                    <Link href={project.demoLink} className="link"><ArrowForwardIcon fontSize="small"/> Go to Live Demo</Link>
+                                {project.demoLink &&
+                                    <Link href={project.demoLink} className="link"><ArrowForwardIcon fontSize="small" /> Go to Live Demo</Link>
                                 }
                                 {project.codeLink &&
-                                    <Link href={project.codeLink} className="link"><ArrowForwardIcon fontSize="small"/> Go to Code</Link>
+                                    <Link href={project.codeLink} className="link"><ArrowForwardIcon fontSize="small" /> Go to Code</Link>
                                 }
                             </div>
                         </div>
@@ -222,15 +222,34 @@ export default function About() {
                         <h3>General Motors</h3>
                         <div className="role-sec">
                             <h5>Software Engineer</h5>
-                            <h5>June 2022 - August 2024</h5>
+                            <h5>June 2022 - September 2024</h5>
                         </div>
                         <div className="wrapper-info">
                             <ul>
-                                <li>Implemented 20+ new features and enhancements based on business requirements and stakeholder feedback, leading to a 20% increase in user engagement and a 15% reduction in customer support queries.</li>
-                                <li>Collaborated with product owners and stakeholders to define clear and achievable sprint goals, resulting in a 90% sprint completion rate over 12 months and a 10% increase in on-time project deliveries.</li>
-                                <li>Participated in 50+ code reviews and pair programming sessions to foster knowledge sharing and improved code quality by 30% across the team and reduced post-deployment bugs by 15%.</li>
-                                <li>Conducted unit testing and developed performance scripts to track the software's capability/stability as more users are on boarded to the app.</li>
-                                <li>Identified and fixed over 100+ bugs in the codebase, improving software stability and user experience by 25%.</li>
+                                <li>
+                                    Developed and delivered 10+ production-ready frontend features using React, TypeScript, and Material UI, improving
+                                    UI consistency and contributing to an estimated 20% increase in user engagement.
+                                </li>
+                                <li>
+                                    Refactored and optimized reusable React components, reducing render times and contributing to a 15% decrease in
+                                    customer-reported UI issues.
+                                </li>
+                                <li>
+                                    Collaborated cross-functionally with product managers, UX designers, and backend engineers in an Agile/Scrum
+                                    environment, consistently achieving a 90% sprint completion rate.
+                                </li>
+                                <li>
+                                    Integrated frontend applications with RESTful APIs, ensuring scalable data flow, error handling, and maintainable
+                                    architecture.
+                                </li>
+                                <li>
+                                    Supported performance and load testing initiatives using Apache JMeter, helping identify high-traffic API bottlenecks
+                                    and improve system reliability under peak load.
+                                </li>
+                                <li>
+                                    Conducted code reviews and pair programming, improving code quality, enforcing best practices, and contributing to a
+                                    15% reduction in post-deployment bugs.
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -242,10 +261,21 @@ export default function About() {
                         </div>
                         <div className="wrapper-info">
                             <ul>
-                                <li>Rewrote 15+ existing Java Server Pages to a modern framework (Angular) to improve code efficiency.</li>
-                                <li>Debugged and traced 50+ existing code to solve code-related business problems.</li>
-                                <li>Assisted in the migration of legacy systems to modern architectures, ensuring the evolution of technologies.</li>
-                                <li>Documented technical specifications and user guides to assist in the onboarding of new members and users.</li>
+                                <li>
+                                    Migrated 15+ legacy JSP applications to modern Angular-based frontends, improving maintainability, performance,
+                                    and developer efficiency.
+                                </li>
+                                <li>
+                                    Debugged and resolved 50+ production and business-critical issues, reducing response times and improving
+                                    application stability.
+                                </li>
+                                <li>
+                                    Contributed to system modernization efforts by assisting with refactors and technical upgrades supporting long-term
+                                    scalability.
+                                </li>
+                                <li>
+                                    Authored and maintained technical documentation, improving onboarding efficiency and internal knowledge sharing.
+                                </li>
                             </ul>
                         </div>
                     </div>

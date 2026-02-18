@@ -182,7 +182,7 @@
   font-size: 30px;
   font-weight: 700;
   border-bottom: 1px solid white;
-  width: 20%;
+  width: 25%;
   padding: 5px 0px;
 }
 
@@ -429,6 +429,8 @@
 .projects-body {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: left;
   padding: 0 20px;
   box-sizing: border-box;
@@ -439,8 +441,9 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin: 20px;
-  padding: 10px;
+  margin: 20px 0;
+  padding: 10px 20px;
+  width: 70%;
   background-color: white;
   border-radius: 10px;
 }
