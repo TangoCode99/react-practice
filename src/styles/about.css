@@ -576,40 +576,6 @@
 }
 
 /* ============================================
-   FOOTER
-============================================ */
-
-.footer {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 15vh;
-  background-color: #2f4f4f;
-  color: #bbcbcb;
-}
-
-.socials {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 200px;
-}
-
-.socials img {
-  margin: 0px 5px;
-  height: 40px;
-  width: 40px;
-  filter: invert(100%);
-}
-
-.copyright {
-  font-size: 10px;
-  font-weight: 500;
-}
-
-/* ============================================
    RESPONSIVE — TABLET (max-width: 1024px)
 ============================================ */
 
@@ -912,17 +878,6 @@
   .contact-body textarea {
     font-size: 14px;
     padding: 8px;
-  }
-
-  .footer {
-    height: auto;
-    padding: 20px 0;
-    min-height: 12vh;
-  }
-
-  .socials img {
-    height: 32px;
-    width: 32px;
   }
 }
 

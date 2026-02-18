@@ -5,16 +5,14 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import AngularLogo from "../icons/angular.svg";
 import ReactLogo from "../icons/react.svg";
 import CSSLogo from "../icons/css3.svg";
-import GithubLogo from "../icons/github.svg";
 import Git from "../icons/git.svg";
 import HTMLLogo from "../icons/html5.svg";
 import JSLogo from "../icons/javascript.svg";
 import MUILogo from "../icons/mui.svg";
-import EmailIcon from "../icons/email.svg";
-import LinkedinLogo from "../icons/linkedin.svg";
 import { GradPhoto, Profile, UGA, Calculator, ToDoApp, Spotify, KitchenInventory } from "../assets";
 import "../styles/about.css"
 import { Link } from "@mui/material";
+import { Footer } from "./footer";
 
 const aboutMe = "Hi! I'm Tango, a frontend developer with a passion for creating seamless and engaging user " +
     "experiences. With two-three years of experience in the corporate world, I specialize in building modern, " +
@@ -227,7 +225,7 @@ export default function About() {
                         <div className="wrapper-info">
                             <ul>
                                 <li>
-                                    Developed and delivered 10+ production-ready frontend features using React, TypeScript, and Material UI, improving
+                                    Developed and delivered 10+ production-ready frontend features using React, JavaScript, and Material UI, improving
                                     UI consistency and contributing to an estimated 20% increase in user engagement.
                                 </li>
                                 <li>
@@ -309,20 +307,7 @@ export default function About() {
                     <button>Submit</button>
                 </div>
             </div>
-            <footer className="footer">
-                <div className="socials">
-                    <a href="https://github.com/TangoCode99" target="_blank" rel="noreferrer">
-                        <img src={GithubLogo} alt="github logo" />
-                    </a>
-                    <a href="https://www.linkedin.com/in/tango-nham/" target="_blank" rel="noreferrer">
-                        <img src={LinkedinLogo} alt="linkedIn logo" />
-                    </a>
-                    <a href="mailto:jnham7@gmail.com" target="_blank" rel="noreferrer">
-                        <img src={EmailIcon} alt="email logo" />
-                    </a>
-                </div>
-                <p className="copyright">TANGO NHAM &#169;2024</p>
-            </footer>
+            <Footer/>
         </div>
     );
 };
