@@ -13,6 +13,7 @@ import { GradPhoto, Profile, UGA, Calculator, ToDoApp, Spotify, KitchenInventory
 import "../styles/about.css"
 import { Link } from "@mui/material";
 import { Footer } from "./footer";
+import Contact from "./contact";
 
 const aboutMe = "Hi! I'm Tango, a frontend developer with a passion for creating seamless and engaging user " +
     "experiences. With two-three years of experience in the corporate world, I specialize in building modern, " +
@@ -295,19 +296,8 @@ export default function About() {
                 </div>
             </div>
             <ProjectsSection />
-            <div className="contact">
-                <div className="contact-title">
-                    <h2>Contact</h2>
-                </div>
-                <div className="contact-body">
-                    <h5>Have a question or want to work together? Leave your details and I'll get back to you as soon as possible.</h5>
-                    <input type="text" placeholder="Name" id="contact-name" />
-                    <input type="email" placeholder="Email" id="contact-email" />
-                    <textarea type="text" placeholder="Message" id="contact-msg" />
-                    <button>Submit</button>
-                </div>
-            </div>
-            <Footer/>
+            <Contact />
+            <Footer />
         </div>
     );
 };
